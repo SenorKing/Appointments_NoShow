@@ -1,0 +1,13 @@
+metric,value
+appointments,110521.0
+patients,62298.0
+no_show_rate,0.2019
+same_day_share,0.3489
+raw_rate_sms,0.2757
+raw_rate_no_sms,0.167
+sms_odds_ratio,0.762
+sms_or_ci_low,0.735
+sms_or_ci_high,0.79
+best_roc_auc,0.735
+capture_top_20pct,0.379
+test_rows,39152.0

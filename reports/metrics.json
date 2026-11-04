@@ -1,0 +1,46 @@
+{
+  "split_date": "2016-05-25",
+  "train_rows": 71369,
+  "test_rows": 39152,
+  "test_no_show_rate": 0.186,
+  "best_model": "Gradient boosting",
+  "models": {
+    "Logistic regression": {
+      "roc_auc": 0.728,
+      "pr_auc": 0.343,
+      "capture_top_20pct": 0.374,
+      "capture_top_30pct": 0.521
+    },
+    "Gradient boosting": {
+      "roc_auc": 0.735,
+      "pr_auc": 0.342,
+      "capture_top_20pct": 0.379,
+      "capture_top_30pct": 0.532
+    },
+    "Baseline: lead time only": {
+      "roc_auc": 0.692,
+      "pr_auc": 0.281,
+      "capture_top_20pct": 0.319,
+      "capture_top_30pct": 0.474
+    }
+  },
+  "permutation_importance_roc_auc_drop": {
+    "Lead time (days)": 0.1968,
+    "Age": 0.0305,
+    "Prior no-show rate": 0.0082,
+    "Neighbourhood": 0.0058,
+    "Prior no-shows": 0.0038,
+    "Weekday": 0.0036,
+    "Hour booked": 0.0027,
+    "Female": 0.0025,
+    "SMS received": 0.0017,
+    "Welfare enrolment": 0.0007,
+    "Prior appointments": 0.0006,
+    "Alcoholism": 0.0005,
+    "Same-day booking": 0.0001,
+    "Returning patient": 0.0,
+    "Diabetes": -0.0,
+    "Handicap level": -0.0001,
+    "Hypertension": -0.0003
+  }
+}
