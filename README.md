@@ -64,15 +64,6 @@ Calling the riskiest 20% of patients reaches **~38% of all no-shows**, nearly 2�
 └── run_all.py                       # reproduce everything
 ```
 
-## Run it
-
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-python run_all.py                    # ~30 s: clean -> SQL -> charts -> model
-jupyter notebook notebooks/no_show_analysis.ipynb
-```
-
 ## Data cleaning notes
 
 - Fixed typo'd columns (`Hipertension`, `Handcap`), converted the target to 0/1
