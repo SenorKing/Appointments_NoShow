@@ -1,0 +1,9 @@
+feature,auc_drop
+Lead time (days),0.1968
+Age,0.0305
+Prior no-show rate,0.0082
+Neighbourhood,0.0058
+Prior no-shows,0.0038
+Weekday,0.0036
+Hour booked,0.0027
+Female,0.0025
