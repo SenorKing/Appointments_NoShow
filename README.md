@@ -37,12 +37,12 @@ Calling the riskiest 20% of patients reaches **~38% of all no-shows**, nearly 2�
   <img src="reports/figures/08_feature_importance.png" width="48%" />
 </p>
 
-## Recommendations
+## Recommendations to lower the missed appointments  
 
-1. **Shorten booking queues / protect short-notice slots.** Lead time is the biggest risk factor.
+1. **Shorten booking queues / protect short-notice slots.** Lead time is the biggest risk factor for no shows.
 2. **Send SMS reminders for every appointment booked 1+ days ahead.** 1–2 day bookings currently get none.
 3. **Use the risk score** to target reminder calls or overbooking on the top 20–30% riskiest slots.
-4. **Reduce access barriers** for young adults and welfare recipients, for example with flexible hours or transport help.
+4. **Reduce access barriers** for young adults and welfare recipients. Having more flexible hours or transport will also help.
 
 ## Project structure
 
@@ -64,11 +64,6 @@ Calling the riskiest 20% of patients reaches **~38% of all no-shows**, nearly 2�
 └── run_all.py                       # reproduce everything
 ```
 
-## Data cleaning notes
-
-- Fixed typo'd columns (`Hipertension`, `Handcap`), converted the target to 0/1
-- Dropped 1 record with age −1 and 5 appointments dated before their booking date
-- Engineered: lead time, same-day flag, weekday, booking hour, age groups, chronic-condition count, prior appointments / prior no-shows per patient
 
 ## Limitations
 
