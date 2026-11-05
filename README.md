@@ -2,7 +2,7 @@
 
 **Why do 1 in 5 patients miss their medical appointments, and can we predict who will?**
 
-An end-to-end healthcare analytics project on **110,521 appointments** from public clinics in Vitória, Brazil (Apr–Jun 2016). It covers data cleaning, SQL analysis, a causal-inference pitfall (Simpson's paradox), statistical modelling and a machine-learning risk score evaluated the way it would be used in practice.
+An end-to-end healthcare analytics project on **110,521 appointments** from public clinics in Vitória, Brazil (Apr–Jun 2016). It covers data cleaning, SQL analysis, a causal-inference pitfall (Simpson's paradox), and a predictive model to flag high-risk patients.
 
 **Stack:** Python · pandas · SQL (SQLite) · scikit-learn · statsmodels · Matplotlib / Seaborn · Jupyter
 
@@ -13,9 +13,9 @@ An end-to-end healthcare analytics project on **110,521 appointments** from publ
 | # | Finding | Evidence |
 |---|---|---|
 | 1 | **Wait time is the #1 driver.** Same-day visits are missed under 5% of the time; waits of 2+ weeks are missed ~1 in 3 times. | ![](reports/figures/01_lead_time.png) |
-| 2 | **SMS reminders *look* harmful but actually help.** Raw data: 27.6% no-show with SMS vs 16.7% without. That's Simpson's paradox: SMS was only sent for 3+ day waits. Within each lead-time group, reminders cut no-shows by 3–8 points; logistic regression gives **odds ratio 0.76 (95% CI 0.74–0.79)**. | ![](reports/figures/02_sms_by_lead_time.png) |
+| 2 | **SMS reminders *look* harmful but actually help.** Raw data: 27.6% no-show with SMS vs 16.7% without. That's Simpson's paradox: SMS was only sent for 3+ day waits. Within each lead-time group, reminders reduce missed visits. | ![](reports/figures/02_sms_simpson.png) |
 | 3 | **Past no-shows predict future ones.** 2+ earlier misses → 32% no-show rate vs 19% for patients who always attended. | ![](reports/figures/04_patient_history.png) |
-| 4 | **Teens & young adults miss most** (27% at 13–17), seniors least (15%). Welfare (Bolsa Família) recipients miss more (24% vs 20%), which suggests access barriers. | ![](reports/figures/03_age.png) |
+| 4 | **Teens & young adults miss most** (27% at 13–17), seniors least (15%). Welfare (Bolsa Família) recipients miss more (24% vs 20%), which suggests access barriers. | ![](reports/figures/03_age_social.png) |
 
 ## Predictive model
 
@@ -75,3 +75,5 @@ Calling the riskiest 20% of patients reaches **~38% of all no-shows**, nearly 2�
 ## Data
 
 [Medical Appointment No Shows](https://www.kaggle.com/datasets/joniarroba/noshowappointments) on Kaggle (JoniHoppen). See the Kaggle page for licence terms.
+
+This project shows that no-shows are not random: they are strongly shaped by access, scheduling, and patient history. By combining careful analysis with a simple risk model, clinics can target the patients most likely to miss appointments and make more efficient use of limited staff time and reminder resources.
